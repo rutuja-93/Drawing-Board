@@ -1,10 +1,19 @@
 const child=document.querySelectorAll(".child");
-const colorInput=document.getElementById("userInput");
+const colorInput=document.getElementById("user-input");
  let color="red";
  let isMouseClicked=false;
 
+document.addEventListener("mousedown", toggleMouseClickedToTrue)
+document.addEventListener("mouseup", toggleMouseClickedToFalse)
 
+function toggleMouseClickedToTrue(){
+    isMouseClicked=true;
+    
+}
 
+function toggleMouseClickedToFalse(){
+    isMouseClicked=false;
+}
 
 for(let i=0;i<child.length;i++){
     child[i].addEventListener("mouseover", changeBg)
@@ -22,8 +31,8 @@ function changeBg(event){
 function eraser(){
 color= "white";
 }
-function chnageColor(){
+function chageColor(){
     
     color=colorInput.value;
 }
-colorInput.addEventListener("change", chnageColor);
+colorInput.addEventListener("change", chageColor);

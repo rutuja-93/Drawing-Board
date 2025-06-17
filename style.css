@@ -6,6 +6,7 @@
 
 body{
     font-family: sans-serif;
+    background-color: grey;
     
 }
 
@@ -21,6 +22,7 @@ h1{
     display: flex;
     flex-wrap: wrap;
     margin: auto;
+    background-color: white;
     
 
 }
@@ -28,4 +30,12 @@ h1{
     height: 60px;
     width: 60px;
     border: 1px solid black;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    gap: 20px;
+    
 }
