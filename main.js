@@ -36,3 +36,13 @@ function chageColor(){
     color=colorInput.value;
 }
 colorInput.addEventListener("change", chageColor);
+
+function downloadImage() {
+    const board = document.querySelector('.draw-board');
+    html2canvas(board).then(canvas => {
+        const link = document.createElement('a');
+        link.download = 'drawing.png';
+        link.href = canvas.toDataURL();
+        link.click();
+    });
+}
